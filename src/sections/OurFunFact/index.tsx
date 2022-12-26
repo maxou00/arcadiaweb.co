@@ -1,27 +1,30 @@
+import { Container } from "../../components/Container";
 import styles from "./index.module.scss";
 
 const blocs = [
   {
-    number: "40K",
-    what: "Global happy businesses",
+    number: "40",
+    what: "Happy businesses",
   },
   {
-    number: "50K",
+    number: "60",
     what: "Projects completed",
   },
   {
-    number: "245K",
+    number: "50",
     what: "Team members",
   },
   {
-    number: "50K",
-    what: "Projects completed",
+    number: "05",
+    what: "Digital solutions",
   },
+
 ];
+
 export function OurFunFact() {
   return (
     <div className={styles.root}>
-      <div className={styles.content}>
+      <Container className={styles.content}>
         <div className={styles.heading}>
           <h2 className={styles.title}>Our fun fact</h2>
           <p className={styles.description}>
@@ -43,7 +46,7 @@ export function OurFunFact() {
             );
           })}
         </div>
-      </div>
+      </Container>
     </div>
   );
 }

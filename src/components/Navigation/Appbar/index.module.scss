@@ -1,13 +1,12 @@
 .appbar {
     width: 100%;
-    min-height: var(--min-appbar-height);
+    min-height: var(--size-min-appbar-height);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 
     .content {
-        width: 100%;
         padding: 0px var(--size-container-padding);
         display: flex;
         flex-direction: row;

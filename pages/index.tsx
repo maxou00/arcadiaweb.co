@@ -2,6 +2,8 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { Heading } from "../src/sections/Heading";
 import { OurFunFact } from "../src/sections/OurFunFact";
+import { WhatCanWeDo } from "../src/sections/WhatCanWeDo";
+import { PortfolioToExplore } from "../src/sections/PortfolioToExplore";
 
 export default function Home() {
   return (
@@ -16,6 +18,8 @@ export default function Home() {
         <Heading />
         <div className={styles.content}>
           <OurFunFact />
+          <WhatCanWeDo />
+          <PortfolioToExplore/>
         </div>
       </main>
     </>

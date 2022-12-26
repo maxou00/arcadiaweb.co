@@ -1,9 +1,10 @@
+import { Container } from "../../Container";
 import styles from "./index.module.scss";
 
 export function Appbar() {
   return (
     <div className={styles.appbar}>
-      <div className={styles.content}>
+      <Container className={styles.content}>
         <h1 className={styles.heading}>ArcadiaWeb</h1>
         <div className={styles.menu}>
           <div className={styles.item}>
@@ -23,7 +24,7 @@ export function Appbar() {
           </div>
         </div>
         <div className={styles.side_actions}></div>
-      </div>
+      </Container>
     </div>
   );
 }

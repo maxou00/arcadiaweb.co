@@ -1,6 +1,8 @@
-import { BtnGetAQuote } from "../../components/Buttons/GetAQuote";
+import { BtnRightArrow } from "../../components/Buttons/BtnRightArrow";
+import { Container } from "../../components/Container";
 import { Appbar } from "../../components/Navigation/Appbar";
 import { ScrollToDown } from "../../components/ScrollToDown";
+import { Text } from "../../components/Text";
 import styles from "./index.module.scss";
 
 export function Heading() {
@@ -8,25 +10,25 @@ export function Heading() {
     <div className={styles.root}>
       <Appbar />
       <div className={styles.content_section}>
-        <div className={styles.main}>
-          <h1 className={styles.hero_title}>
+        <Container className={styles.main}>
+          <Text variant="hero" className={styles.hero_title}>
             Creativity In <br /> Our Blood Line
-          </h1>
+          </Text>
           <div className={styles.hero_content}>
             <div className={styles.left}>
-              <BtnGetAQuote />
+              <BtnRightArrow text="Get a quote" />
             </div>
             <div className={styles.right}>
-              <p>
+              <Text variant="subtitle">
                 We deliver best problem solving solution for our client and
                 provide finest finishing product in present and upcoming future.
-              </p>
+              </Text>
             </div>
           </div>
           <div className={styles.bottom}>
             <ScrollToDown />
           </div>
-        </div>
+        </Container>
       </div>
     </div>
   );
