@@ -1,0 +1,52 @@
+.cta_quote {
+    all: unset;
+    color: var(--color-on-background);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 8px;
+    font-family: var(--fonts-heading);
+    cursor: pointer;
+    --hover-color: var(--colors-primary);
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        .text {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .line {
+            width: 0;
+            height: 3px;
+            border-radius: 8px;
+            transition: all 250ms var(--easing-bezier);
+        }
+    }
+
+    .icon {
+        transition: all 250ms var(--easing-bezier);
+    }
+
+    &:hover {
+        .content {
+            .text {
+                color: var(--hover-color);
+            }
+
+            .line {
+                width: 100%;
+                background: var(--hover-color);
+            }
+        }
+
+        .icon {
+            color: var(--hover-color);
+        }
+    }
+}

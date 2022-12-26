@@ -1,0 +1,35 @@
+@keyframes up-and-down {
+    
+    0% {
+        top: calc(8px);
+        transform: translate(-50%, -50%);
+    }
+
+    100% {
+        top: calc(100% - 8px);
+        transform: translate(-50%, -50%);
+    }
+
+}
+
+
+.root {
+    border: 1px solid var(--colors-on-surface);
+    width: 28px;
+    height: 46px;
+    border-radius: 24px;
+    position: relative;
+
+    .dot {
+        width: 8px;
+        height: 8px;
+        background-color: var(--colors-on-surface);
+        position: absolute;
+        border-radius: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: up-and-down 1.5s ease-in-out alternate infinite;
+    }
+
+}
