@@ -1,5 +1,6 @@
 import Flicking, { Panel, ReadyEvent } from "@egjs/react-flicking";
 import "@egjs/react-flicking/dist/flicking.css";
+import "@egjs/flicking-plugins/dist/flicking-plugins.css";
 
 import classNames from "classnames";
 import { Text } from "../../components/Text";
@@ -8,7 +9,8 @@ import styles from "./index.module.scss";
 import portfolio1 from "../../../assets/img/portfolio_1.jpeg";
 import portfolio2 from "../../../assets/img/portfolio_2.jpeg";
 import portfolio3 from "../../../assets/img/portfolio_3.jpeg";
-import { useCallback, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
+import { Pagination } from "@egjs/flicking-plugins";
 
 const projects = [
   {
@@ -20,7 +22,7 @@ const projects = [
     img: portfolio2.src,
   },
   {
-    name: "Project Gamma",
+    name: "Project Epsilon",
     img: portfolio3.src,
   },
 ];
@@ -49,18 +51,42 @@ export function PortfolioToExplore() {
                 className={classNames("flicking-panel", styles.project_wrapper)}
                 data-selected={selectedIndex === i}
               >
-                <div data-selected={selectedIndex === i} className={styles.project}>
+                <div
+                  data-selected={selectedIndex === i}
+                  className={styles.project}
+                >
                   <img className={styles.img} src={p.img} alt={p.name} />
                   <div className={styles.overlay}>
-                    <Text variant="body" className={styles.name}>
-                      {p.name}
-                    </Text>
+                    <div className={styles.overlay_content}>
+                      <div className={styles.name_content}>
+                        <Text variant="body" className={styles.name}>
+                          {p.name}
+                        </Text>
+                        <Text variant="body" className={styles.see_details}>
+                          See details {"  "}
+                          <span style={{ letterSpacing: -3 }}>₋₋₋₋</span>
+                        </Text>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             );
           })}
         </Flicking>
+        <div className={styles.indicators}>
+          {projects.map((p, index) => {
+            return (
+              <span
+                key={p.name}
+                data-selected={selectedIndex === index}
+                className={styles.indicator}
+              >
+                <span className={styles.dot}></span>
+              </span>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
