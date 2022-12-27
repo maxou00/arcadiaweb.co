@@ -16,6 +16,7 @@ import {
 import { Container } from "../../components/Container";
 import classNames from "classnames";
 import { BsStarFill } from "react-icons/bs";
+import { GridPoints } from "../../components/GridPoints";
 
 const items = [
   {
@@ -281,6 +282,7 @@ export function Testimonials() {
           </div>
         </div>
       </Container>
+      <GridPoints cols={5} rows={6} className={styles.grid}/>
     </div>
   );
 }
