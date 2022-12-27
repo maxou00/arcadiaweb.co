@@ -1,3 +1,5 @@
+import { BsLinkedin } from "react-icons/bs";
+import { FaLinkedin, FaSlack, FaTwitter, FaYoutube } from "react-icons/fa";
 import { Container } from "../../components/Container";
 import { InputNewsletter } from "../../components/Inputs/InputNewsletter";
 import { Text } from "../../components/Text";
@@ -30,6 +32,20 @@ export function Footer() {
             Welcome to arino sed ut perspiciae omunde omnis iste natus error
             sitort voluptatem accusantium.
           </Text>
+          <div className={styles.social_row}>
+            <button className={styles.social}>
+              <FaLinkedin size={18}/>
+            </button>
+            <button className={styles.social}>
+              <FaTwitter size={18}/>
+            </button>
+            <button className={styles.social}>
+              <FaYoutube size={18}/>
+            </button>
+            <button className={styles.social}>
+              <FaSlack size={18}/>
+            </button>
+          </div>
         </div>
         <div className={styles.column}>
           <Text variant="body" className={styles.footer_section_title}>
