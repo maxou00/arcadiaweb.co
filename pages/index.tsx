@@ -7,13 +7,18 @@ import { PortfolioToExplore } from "../src/sections/PortfolioToExplore";
 import { OurTeam } from "../src/sections/Team";
 import { Testimonials } from "../src/sections/Testimonials";
 import { VisitOurBlog } from "../src/sections/OurBlog";
+import { Container } from "../src/components/Container";
+import { CtaSomethingCool } from "../src/sections/ctas/CtaSomethingCool";
 
 export default function Home() {
   return (
     <>
       <Head>
         <title>Arcadia</title>
-        <meta name="description" content="We help you to turn your idea into a stunning business" />
+        <meta
+          name="description"
+          content="We help you to turn your idea into a stunning business"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -25,7 +30,12 @@ export default function Home() {
           <PortfolioToExplore />
           <OurTeam />
           <Testimonials />
-          <VisitOurBlog/>
+          <VisitOurBlog />
+          <div className={styles.cta_wrapper}>
+            <Container>
+              <CtaSomethingCool />
+            </Container>
+          </div>
         </div>
       </main>
     </>
