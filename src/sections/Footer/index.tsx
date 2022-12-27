@@ -64,13 +64,13 @@ export function Footer() {
             Contact us
           </Text>
           <Text variant="body" className={styles.contact_address}>
-            55/53 Jay Path Apt. 908
+            79000 Paris, France
           </Text>
           <Text variant="body" className={styles.contact_phone}>
-            +44 454 7800 112
+            +33 640 7800 982
           </Text>
           <Text variant="body" className={styles.contact_email}>
-            sbechtelar@example.net
+            hello@arcadiaweb.co
           </Text>
         </div>
         <div className={styles.column}>
