@@ -12,7 +12,8 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        column-gap: 8px;
+        column-gap: 36px;
+        position: relative;
     }
 }
 
@@ -22,12 +23,14 @@
 }
 
 .comments {
-    width: 60%;
+    width: 70%;
+    padding: 36px;
+    position: relative;
 }
 
 .avatar_wrapper {
-    width: 146px;
-    height: 146px;
+    width: var(--avatar-width);
+    height: var(--avatar-height);
     transition: all 0.25s linear;
     position: relative;
 
@@ -49,23 +52,59 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 246px;
-            height: 246px;
+            width: var(--avatar-selected-width);
+            height: var(--avatar-selected-height);
             z-index: 4;
         }
     }
 }
 
 .comment_wrapper {
-    margin: 0px 24px;
-
+    margin: 0px 8px;
     .comment {
+        padding: 36px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        row-gap: 3rem;
+
         &_text {
             font-size: 21px;
-            font-family: var(--fonts-heading);
+            font-weight: 600;
+            opacity: 1;
             max-width: 80%;
         }
     }
+}
+
+.comment_author {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    row-gap: 4px;
+
+    &_name {
+        font-size: 24px !important;
+        font-family: var(--fonts-heading) !important;
+        opacity: 1;
+        font-weight: 600;
+    }
+
+    &_role {
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
+.stars {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 6px;
+    color: var(--colors-primary);
 }
 
 .carousel_btns {
@@ -74,4 +113,8 @@
     align-items: center;
     justify-content: center;
     gap: 16px;
+    position: absolute;
+    bottom: 36px;
+    right: 0;
+    transform: translateY(-100%);
 }

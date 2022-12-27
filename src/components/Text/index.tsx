@@ -34,34 +34,34 @@ export function Text(props: TextProps) {
 
   if (props.variant === "subtitle") {
     return (
-      <p data-clx={clx} data-variant={props.variant} {...props} className={clx}>
+      <p data-variant={props.variant} {...props} className={clx}>
         {props.children}
       </p>
     );
   }
   if (props.variant === "body") {
     return (
-      <p data-clx={clx} data-variant={props.variant} {...props} className={clx}>
+      <p data-variant={props.variant} {...props} className={clx}>
         {props.children}
       </p>
     );
   }
   if (props.variant === "hero") {
     return (
-      <h1 data-clx={clx} data-variant={props.variant} {...props} className={clx}>
+      <h1 data-variant={props.variant} {...props} className={clx}>
         {props.children}
       </h1>
     );
   }
   if (props.variant === "section-announcer") {
     return (
-      <span data-clx={clx} data-variant={props.variant} {...props} className={clx}>
+      <span data-variant={props.variant} {...props} className={clx}>
         {props.children}
       </span>
     );
   }
   return (
-    <h2 data-clx={clx} data-variant={props.variant} {...props} className={clx}>
+    <h2 data-variant={props.variant} {...props} className={clx}>
       {props.children}
     </h2>
   );

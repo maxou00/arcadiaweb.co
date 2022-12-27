@@ -6,7 +6,7 @@ $container: 1280px;
   --colors-on-background: #f9f9f9;
   --colors-on-surface: #f9f9f9;
 
-  --colors-primary: #ff4A17;
+  --colors-primary: #ff4a17;
   --colors-on-primary: #fafafa;
 
   --fonts-heading: "Poppins", sans-serif;
@@ -38,7 +38,12 @@ body {
   background-color: var(--colors-background);
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--fonts-heading);
 }
 
@@ -53,6 +58,14 @@ a {
   background: no-repeat center/cover fixed url("../assets/img/hero_bg.jpeg");
   color: var(--colors-on-background);
   font-family: var(--fonts-body);
+}
+
+.trait {
+  width: 24px;
+  height: 2px;
+  background: var(--colors-on-surface);
+  display: inline-block;
+  margin-bottom: 4px;
 }
 
 @media screen and (max-width: #{$container}) {
