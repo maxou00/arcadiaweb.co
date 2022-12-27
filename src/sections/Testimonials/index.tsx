@@ -43,6 +43,60 @@ const items = [
     Dude your stuff  is the bomb! 
     eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt to the explicabo.`,
   },
+  {
+    img: tes2.src,
+    name: "Mark Manson",
+    rating: 5,
+    comment: `I wish I would have thought of it first. 
+    Creative agency is the most tech valuable business resource we have ever purchased. 
+    Dude your stuff  is the bomb! 
+    eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt to the explicabo.`,
+  },
+  {
+    img: tes3.src,
+    name: "Mark Manson",
+    rating: 5,
+    comment: `I wish I would have thought of it first. 
+    Creative agency is the most tech valuable business resource we have ever purchased. 
+    Dude your stuff  is the bomb! 
+    eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt to the explicabo.`,
+  },
+  {
+    img: tes1.src,
+    name: "Mark Manson",
+    rating: 5,
+    comment: `I wish I would have thought of it first. 
+    Creative agency is the most tech valuable business resource we have ever purchased. 
+    Dude your stuff  is the bomb! 
+    eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt to the explicabo.`,
+  },
+  {
+    img: tes3.src,
+    name: "Mark Manson",
+    rating: 5,
+    comment: `I wish I would have thought of it first. 
+    Creative agency is the most tech valuable business resource we have ever purchased. 
+    Dude your stuff  is the bomb! 
+    eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt to the explicabo.`,
+  },
+  {
+    img: tes2.src,
+    name: "Mark Manson",
+    rating: 5,
+    comment: `I wish I would have thought of it first. 
+    Creative agency is the most tech valuable business resource we have ever purchased. 
+    Dude your stuff  is the bomb! 
+    eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt to the explicabo.`,
+  },
+  {
+    img: tes3.src,
+    name: "Mark Manson",
+    rating: 5,
+    comment: `I wish I would have thought of it first. 
+    Creative agency is the most tech valuable business resource we have ever purchased. 
+    Dude your stuff  is the bomb! 
+    eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt to the explicabo.`,
+  },
 ];
 
 export function Testimonials() {
@@ -94,10 +148,8 @@ export function Testimonials() {
             ref={(el) => (avatarFlicking.current = el)}
             plugins={plugins}
             circular
-            renderOnlyVisible
-            align="prev"
-            bound={true}
-            bounce={30}
+            align="center"
+            adaptive
             onChanged={(ev) => {
               setSelectedAvatar(ev.index);
             }}
@@ -105,7 +157,7 @@ export function Testimonials() {
             {items.map((it, index) => {
               return (
                 <div
-                  key={it.name}
+                  key={it.name + index}
                   className={classNames(
                     "flicking-panel",
                     styles.avatar_wrapper
@@ -121,10 +173,8 @@ export function Testimonials() {
         <div className={styles.comments}>
           <Flicking
             ref={(el) => (commentFlicking.current = el)}
-            bound={true}
-            bounce={30}
+            align="center"
             circular
-            renderOnlyVisible
             panelsPerView={1}
             onChanged={(ev) => {
               setSelectedComment(ev.index);
@@ -133,7 +183,7 @@ export function Testimonials() {
             {items.map((it, index) => {
               return (
                 <div
-                  key={it.name}
+                  key={it.name + index}
                   className={classNames(
                     "flicking-panel",
                     styles.comment_wrapper

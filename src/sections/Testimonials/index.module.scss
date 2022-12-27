@@ -17,7 +17,7 @@
 }
 
 .avatars {
-    width: 40%;
+    width: 30%;
     height: 250px;
 }
 
@@ -26,17 +26,33 @@
 }
 
 .avatar_wrapper {
-    width: 196px;
-    height: 196px;
+    width: 146px;
+    height: 146px;
+    transition: all 0.25s linear;
+    position: relative;
 
     .avatar {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         width: 100%;
         height: 100%;
         pointer-events: none;
+        transition: all 250ms linear;
+        z-index: 2;
     }
 
     &[data-selected="true"] {
-        transform: scale(1.25);
+        .avatar {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 246px;
+            height: 246px;
+            z-index: 4;
+        }
     }
 }
 
@@ -50,9 +66,7 @@
             max-width: 80%;
         }
     }
-
 }
-
 
 .carousel_btns {
     display: flex;
