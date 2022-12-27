@@ -87,6 +87,7 @@
             flex-direction: row;
             align-items: center;
             justify-content: center;
+            padding: 16px;
 
             position: relative;
             overflow: hidden;
@@ -108,5 +109,6 @@
         font-size: 18px;
         font-family: var(--fonts-heading);
         font-weight: 500;
+        margin-bottom: 4px;
     }
 }

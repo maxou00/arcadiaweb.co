@@ -5,6 +5,7 @@ import { OurFunFact } from "../src/sections/OurFunFact";
 import { WhatCanWeDo } from "../src/sections/WhatCanWeDo";
 import { PortfolioToExplore } from "../src/sections/PortfolioToExplore";
 import { OurTeam } from "../src/sections/Team";
+import { Testimonials } from "../src/sections/Testimonials";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
           <WhatCanWeDo />
           <PortfolioToExplore />
           <OurTeam />
+          <Testimonials />
         </div>
       </main>
     </>

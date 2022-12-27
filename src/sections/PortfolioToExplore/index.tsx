@@ -1,4 +1,4 @@
-import Flicking, { Panel, ReadyEvent } from "@egjs/react-flicking";
+import Flicking, {  } from "@egjs/react-flicking";
 import "@egjs/react-flicking/dist/flicking.css";
 import "@egjs/flicking-plugins/dist/flicking-plugins.css";
 
@@ -9,8 +9,7 @@ import styles from "./index.module.scss";
 import portfolio1 from "../../../assets/img/portfolio_1.jpeg";
 import portfolio2 from "../../../assets/img/portfolio_2.jpeg";
 import portfolio3 from "../../../assets/img/portfolio_3.jpeg";
-import { useCallback, useMemo, useState } from "react";
-import { Pagination } from "@egjs/flicking-plugins";
+import { useState } from "react";
 
 const projects = [
   {
@@ -39,7 +38,7 @@ export function PortfolioToExplore() {
       <div className={styles.projects}>
         <Flicking
           circular
-          renderOnlyVisible
+          align="center"
           onChanged={(ev) => {
             setSelectedIndex(ev.index);
           }}
