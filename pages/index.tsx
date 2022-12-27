@@ -6,6 +6,7 @@ import { WhatCanWeDo } from "../src/sections/WhatCanWeDo";
 import { PortfolioToExplore } from "../src/sections/PortfolioToExplore";
 import { OurTeam } from "../src/sections/Team";
 import { Testimonials } from "../src/sections/Testimonials";
+import { VisitOurBlog } from "../src/sections/OurBlog";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
           <PortfolioToExplore />
           <OurTeam />
           <Testimonials />
+          <VisitOurBlog/>
         </div>
       </main>
     </>
