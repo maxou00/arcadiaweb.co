@@ -6,11 +6,12 @@
     align-items: center;
     justify-content: center;
     row-gap: 16px;
-    padding: 4rem 0px;
+    padding: 8rem 0px;
 
     &_container {
         width: 100% !important;
         padding-left: calc((100% - var(--size-container-max-width)) / 2);
+        padding-right: 8px;
         display: flex;
         flex-direction: row;
         align-items: flex-start;
@@ -96,9 +97,14 @@
 
     .name {
         font-weight: bold;
-        font-size: 18px;
+        font-size: 21px;
+        opacity: 1;
         font-family: var(--fonts-heading);
-        font-weight: 500;
-        margin-bottom: 4px;
+        font-weight: 600;
+        transition: all 250ms linear;
+
+        &:hover {
+            color: var(--colors-primary);
+        }
     }
 }
