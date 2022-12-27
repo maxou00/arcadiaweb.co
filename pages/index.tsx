@@ -4,6 +4,7 @@ import { Heading } from "../src/sections/Heading";
 import { OurFunFact } from "../src/sections/OurFunFact";
 import { WhatCanWeDo } from "../src/sections/WhatCanWeDo";
 import { PortfolioToExplore } from "../src/sections/PortfolioToExplore";
+import { OurTeam } from "../src/sections/Team";
 
 export default function Home() {
   return (
@@ -19,7 +20,8 @@ export default function Home() {
         <div className={styles.content}>
           <OurFunFact />
           <WhatCanWeDo />
-          <PortfolioToExplore/>
+          <PortfolioToExplore />
+          <OurTeam />
         </div>
       </main>
     </>

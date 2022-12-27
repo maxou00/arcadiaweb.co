@@ -1,0 +1,23 @@
+.button {
+    all: unset;
+    padding: 4px;
+    border: 1px solid var(--colors-on-background);
+    border-radius: 4px;
+    min-width: 48px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: var(--colors-on-background);
+    transition: all .25s linear;
+
+    &:hover {
+        background-color: var(--colors-primary);
+        color: var(--colors-on-primary);
+        border: 1px solid var(--colors-primary);
+    }
+}
+
+.icon {
+    
+}
