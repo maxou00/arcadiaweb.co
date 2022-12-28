@@ -85,11 +85,11 @@ export function Footer() {
         <div className={styles.copyright_area}>
           <Text variant="body">Copyright 2023 © Arcadia</Text>
           <div className={styles.copyright_links}>
-            <a className={styles.copyright_link} href="/policy/terms-of-use">
+            <a className={styles.copyright_link} href="/legal/terms-of-use">
               Terms of use
             </a>
             |
-            <a className={styles.copyright_link} href="/policy/terms-of-use">
+            <a className={styles.copyright_link} href="/legal/privacy-policy">
               Privacy policy
             </a>
           </div>
