@@ -70,8 +70,10 @@ a {
   margin-bottom: 4px;
 }
 
+
 @media screen and (max-width: #{$container}) {
   :root {
     --size-container-max-width: calc(100vw - 24px);
+    --size-min-appbar-height: 64px;
   }
 }

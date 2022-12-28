@@ -35,3 +35,46 @@
         opacity: .75;
     }
 }
+
+@media screen and (max-width: 960px) {
+
+    .text {
+    
+        &[data-variant="hero"] {
+            font-size: 6rem;
+            font-family: var(--fonts-heading);
+            color: var(--colors-on-surface);
+        }
+    
+        &[data-variant="title"] {
+            font-size: 1.9rem;
+            font-weight: 600;
+            font-family: var(--fonts-heading);
+            color: var(--colors-on-surface);
+        }
+    
+        &[data-variant="section-announcer"] {
+            font-size: .95rem;
+            font-family: var(--fonts-heading);
+            font-weight: 600;
+            color: var(--colors-on-surface);
+            opacity: .55;
+        }
+    
+        &[data-variant="subtitle"] {
+            font-size: 16px;
+            font-family: var(--fonts-body);
+            font-weight: 600;
+            color: var(--colors-on-surface);
+        }
+    
+        &[data-variant="body"] {
+            font-size: 14px;
+            font-family: var(--fonts-body);
+            color: var(--colors-on-surface);
+            opacity: .75;
+        }
+    }
+    
+
+}

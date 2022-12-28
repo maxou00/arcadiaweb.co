@@ -2,12 +2,12 @@
     width: 100%;
     min-height: 100vh;
     background-color: transparent;
-    
+
 }
 
 .content_section {
     width: 100%;
-    min-height: var(--size-min-appbar-height);
+    min-height: calc(100% - var(--size-min-appbar-height));
     padding-bottom: 256px;
     display: flex;
     flex-direction: column;
@@ -53,4 +53,26 @@
     align-items: center;
     justify-content: center;
     padding: 12px;
+}
+
+@media screen and (max-width: 1280px) {
+    .content_section {
+        padding-bottom: 256px;
+        
+        .main {
+            .hero_title {
+                font-size: 2.5rem;
+                margin-bottom: 12px;
+            }
+        }
+    }
+
+    .hero_content {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 1rem 0px;
+        row-gap: 1.5rem;
+    }
 }

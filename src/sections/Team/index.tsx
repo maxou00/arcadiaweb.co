@@ -54,13 +54,13 @@ export function OurTeam() {
   const ref = useRef<Flicking | undefined>();
 
   const onPrev = useCallback(() => {
-    if(ref.current) {
+    if (ref.current) {
       ref.current.prev();
     }
   }, []);
 
   const onNext = useCallback(() => {
-    if(ref.current) {
+    if (ref.current) {
       ref.current.next();
     }
   }, []);
@@ -75,8 +75,8 @@ export function OurTeam() {
               Awesome team members
             </Text>
             <div className={styles.carousel_btns}>
-              <BtnCarouselPrev onClick={onPrev}/>
-              <BtnCarouselNext onClick={onNext}/>
+              <BtnCarouselPrev onClick={onPrev} />
+              <BtnCarouselNext onClick={onNext} />
             </div>
           </div>
         </div>
@@ -87,7 +87,9 @@ export function OurTeam() {
             onChanged={(ev) => {
               setSelectedIndex(ev.index);
             }}
-            ref={(el) => {ref.current = el as any}}
+            ref={(el) => {
+              ref.current = el as any;
+            }}
           >
             {teamMembers.map((p, i) => {
               return (
@@ -121,6 +123,19 @@ export function OurTeam() {
               );
             })}
           </Flicking>
+          <div className={styles.indicators}>
+            {teamMembers.map((p, index) => {
+              return (
+                <span
+                  key={p.name}
+                  data-selected={selectedIndex === index}
+                  className={styles.indicator}
+                >
+                  <span className={styles.dot}></span>
+                </span>
+              );
+            })}
+          </div>
         </div>
       </Container>
     </div>

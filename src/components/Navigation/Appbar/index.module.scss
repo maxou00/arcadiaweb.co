@@ -30,4 +30,29 @@
             }
         }
     }
+
+    .hamburger {
+        all: unset;
+        color: var (--colors-on-background);
+        display: none;
+    }
+}
+
+
+@media screen and  (max-width: 880px) {
+    .appbar {
+        padding: 24px;
+    }
+
+    .appbar .heading {
+        font-size: 1.5rem !important;
+    }
+
+    .appbar .menu {
+        display: none;
+    }
+
+    .appbar .hamburger {
+        display: block;
+    }
 }

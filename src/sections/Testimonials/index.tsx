@@ -250,7 +250,7 @@ export function Testimonials() {
                       {stars.map((_, s) => {
                         let opacity = it.rating >= s + 1 ? 1 : 0.4;
                         return (
-                          <BsStarFill key={s} size={24} opacity={opacity} />
+                          <BsStarFill key={s} size={18} opacity={opacity} />
                         );
                       })}
                     </div>
