@@ -14,7 +14,7 @@
         background: no-repeat center / cover url("../../../assets/img/cta_bg.jpeg");
         color: var(--colors-on-surface);
         padding: 56px;
-        transform: translateY(-50%);
+        transform: translateY(calc(-1 * var(--heading-bottom-card-transform)));
         border-radius: 24px;
     }
 }
@@ -32,7 +32,7 @@
 
     .description {
         font-size: 16px;
-        opacity: .75;
+        opacity: 0.75;
         max-width: 48ch;
     }
 }
@@ -45,7 +45,6 @@
 }
 
 .bloc {
-
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -58,18 +57,18 @@
         font-family: var(--fonts-heading);
         opacity: 1;
     }
-    
+
     &_content {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
-    
+
         .plus {
             color: var(--colors-primary);
             font-size: 24px;
             font-weight: bold;
-            line-height: .75;
+            line-height: 0.75;
         }
 
         .p {
@@ -79,16 +78,14 @@
     }
 }
 
-
 @media screen and (max-width: 860px) {
-    
     .root {
         .content {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             justify-content: flex-start;
-            transform: translateY(-128px);
+            transform: translateY(calc(-1 * var(--heading-bottom-card-transform)));
         }
     }
     .heading {
@@ -98,9 +95,7 @@
     }
 }
 
-
 @media screen and (max-width: 560px) {
-    
     .achievements {
         display: flex;
         flex-direction: column;
