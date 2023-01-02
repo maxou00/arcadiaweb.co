@@ -6,6 +6,7 @@ import { ProvideNavItemContext } from "./context";
 import styles from "./index.module.scss";
 
 interface Props extends HTMLAttributes<HTMLDivElement> {
+  href?: string;
   withSurface?: boolean;
   surfaceExpanded?: boolean;
   anchor?: HTMLDivElement | undefined;

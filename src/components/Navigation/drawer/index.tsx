@@ -22,7 +22,7 @@ export default function NavigationDrawer(props: Props) {
     onOpenChange(open) {
       props.onClose();
     },
-    placement: "left-start",
+    placement: "right",
   });
 
   const click = useClick(floating.context);

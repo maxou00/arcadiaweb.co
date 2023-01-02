@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Envelope, List, MapPin, Phone, X } from "phosphor-react";
 import { useState } from "react";
 import { FaLinkedin, FaSlack, FaTwitter, FaYoutube } from "react-icons/fa";
@@ -28,9 +29,11 @@ function DesktopMenu(props: { parent: HTMLDivElement | undefined }) {
           <p>Here is the home space</p>
         </NavItemSurface>
       </NavItem>
-      <NavItem className={styles.item}>
-        <span className={styles.title}>About</span>
-      </NavItem>
+      <Link href="/about">
+        <NavItem className={styles.item}>
+          <span className={styles.title}>About</span>
+        </NavItem>
+      </Link>
       <NavItem className={styles.item} withSurface anchor={props.parent}>
         <span className={styles.title}>Services</span>
         <NavItemSurface>
@@ -43,7 +46,7 @@ function DesktopMenu(props: { parent: HTMLDivElement | undefined }) {
           })}
         </NavItemSurface>
       </NavItem>
-      <NavItem className={styles.item} anchor={props.parent}>
+      <NavItem className={styles.item} withSurface anchor={props.parent}>
         <span className={styles.title}>Portfolio</span>
         <NavItemSurface>
           <p>Our latest projects.</p>
@@ -104,7 +107,7 @@ export function Appbar() {
               <p>infotech@arino.com</p>
             </div>
             <div className={styles.contact}>
-              <MapPin size={24} color="var(--colors-primary)"/>
+              <MapPin size={24} color="var(--colors-primary)" />
               <p>50 Wall Street Suite, 44150 Ohio, United States</p>
             </div>
           </div>
@@ -118,16 +121,16 @@ export function Appbar() {
           </div>
           <div className={styles.social_row}>
             <button className={styles.social}>
-              <FaLinkedin size={18}/>
+              <FaLinkedin size={18} />
             </button>
             <button className={styles.social}>
-              <FaTwitter size={18}/>
+              <FaTwitter size={18} />
             </button>
             <button className={styles.social}>
-              <FaYoutube size={18}/>
+              <FaYoutube size={18} />
             </button>
             <button className={styles.social}>
-              <FaSlack size={18}/>
+              <FaSlack size={18} />
             </button>
           </div>
         </div>
