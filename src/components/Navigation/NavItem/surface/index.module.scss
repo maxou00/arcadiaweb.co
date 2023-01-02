@@ -1,0 +1,22 @@
+.surface {
+    background-color: var(--colors-background);
+    min-height: 120px;
+    transition: all 150ms linear;
+    padding: 16px;
+    border-radius: 0px 0px 4px 4px;
+    transform: translateY(0px);
+    z-index: 2;
+    border-top: 2px solid var(--colors-primary);
+
+    &[data-expanded="true"] {
+        width: var(--size-container-max-width) !important;
+    }
+
+    &[data-active="false"] {
+        overflow: hidden;
+        height: 0px;
+        opacity: 0;
+        transform: translateY(10%);
+        visibility: hidden;
+    }
+}

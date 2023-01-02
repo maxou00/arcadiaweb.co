@@ -12,6 +12,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+        position: relative;
     }
 
     .menu {
@@ -19,16 +20,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
-
-        .item {
-            padding: 24px;
-            text-transform: uppercase;
-
-            &:hover {
-                cursor: pointer;
-                color: var(--colors-primary);
-            }
-        }
+        gap: 8px;
     }
 
     .hamburger {
@@ -38,8 +30,114 @@
     }
 }
 
+.service {
+    color: white;
+    padding: 8px 4px;
+}
 
-@media screen and  (max-width: 880px) {
+.menu_drawer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2.5rem;
+    position: relative;
+    padding: 2.5rem 24px 24px 24px;
+
+    .close_btn {
+        all: unset;
+        background-color: transparent;
+        color: var(--colors-on-surface);
+        position: absolute;
+        right: 2px;
+        top: 2px;
+        width: 56px;
+        height: 56px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .heading {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .heading_title {
+        font-size: 21px;
+    }
+
+    .heading_description {
+        font-size: 16px;
+    }
+
+    .section_title {
+        font-size: 18px;
+    }
+
+    .contacts {
+        @extend .heading;
+        gap: 16px;
+    }
+
+    .contact {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 8px;
+
+        font-size: 14px;
+    }
+}
+
+.subscribe {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 16px;
+
+    .subscription_text {
+        font-size: 14px;
+        opacity: 0.75;
+    }
+}
+
+.social_row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 16px;
+}
+
+.social {
+    all: unset;
+    background: transparent;
+    fill: var(--colors-on-background);
+    border: 1px solid var(--colors-on-background);
+    width: 36px;
+    height: 36px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    transition: all 250ms linear;
+
+    &:hover {
+        border: 1px solid var(--colors-primary);
+    }
+}
+
+@media screen and (max-width: 880px) {
     .appbar {
         padding: 24px;
     }

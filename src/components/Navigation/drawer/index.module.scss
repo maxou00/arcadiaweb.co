@@ -1,0 +1,28 @@
+.overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 50;
+    transition: all 250ms linear;
+
+    &.open {
+        transform: translateX(0%);
+    }
+
+    &.close {
+        transform: translateX(-100%);
+    }
+}
+
+.content {
+    background-color: var(--colors-background);
+    width: 320px;
+    height: 100%;
+    transition: all 450ms linear;
+
+    &.open {
+        transform: translateX(0%);
+    }
+
+    &.close {
+        transform: translateX(-100%);
+    }
+}

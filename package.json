@@ -13,6 +13,7 @@
     "@egjs/react-flicking": "^4.10.5",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@floating-ui/react": "^0.15.1",
     "@next/font": "13.1.0",
     "@types/node": "18.11.17",
     "@types/react": "18.0.26",
