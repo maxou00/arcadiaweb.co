@@ -1,20 +1,20 @@
-import { Text } from "../../components/Text";
+import { Text } from "../../../components/Text";
 import Flicking from "@egjs/react-flicking";
 import "@egjs/react-flicking/dist/flicking.css";
 
 import styles from "./index.module.scss";
-import member1 from "../../../assets/img/member_1.jpeg";
-import member2 from "../../../assets/img/member_2.jpeg";
-import member3 from "../../../assets/img/member_3.jpeg";
-import member4 from "../../../assets/img/member_4.jpeg";
+import member1 from "../../../../assets/img/member_1.jpeg";
+import member2 from "../../../../assets/img/member_2.jpeg";
+import member3 from "../../../../assets/img/member_3.jpeg";
+import member4 from "../../../../assets/img/member_4.jpeg";
 
 import { useCallback, useRef, useState } from "react";
 import classNames from "classnames";
-import { Container } from "../../components/Container";
+import { Container } from "../../../components/Container";
 import {
   BtnCarouselNext,
   BtnCarouselPrev,
-} from "../../components/Buttons/BtnCarouselArrows";
+} from "../../../components/Buttons/BtnCarouselArrows";
 
 const teamMembers = [
   {

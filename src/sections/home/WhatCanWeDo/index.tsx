@@ -1,11 +1,11 @@
-import { BtnRightArrow } from "../../components/Buttons/BtnRightArrow";
-import { Container } from "../../components/Container";
-import { Text } from "../../components/Text";
+import { BtnRightArrow } from "../../../components/Buttons/BtnRightArrow";
+import { Container } from "../../../components/Container";
+import { Text } from "../../../components/Text";
 import styles from "./index.module.scss";
-import serviceUiUxImg from "../../../assets/img/service_1.jpeg";
-import serviceReactImg from "../../../assets/img/service_2.jpeg";
-import serviceMarketingImg from "../../../assets/img/service_3.jpeg";
-import serviceTechImg from "../../../assets/img/service_4.jpeg";
+import serviceUiUxImg from "../../../../assets/img/service_1.jpeg";
+import serviceReactImg from "../../../../assets/img/service_2.jpeg";
+import serviceMarketingImg from "../../../../assets/img/service_3.jpeg";
+import serviceTechImg from "../../../../assets/img/service_4.jpeg";
 
 const services = [
   {

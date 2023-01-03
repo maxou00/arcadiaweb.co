@@ -1,4 +1,36 @@
 .base {
     width: 100%;
     min-height: 100vh;
+    background: no-repeat center / cover fixed url("../assets/img/about_hero_bg.jpeg");
+}
+
+$height: 380px;
+
+.heading {
+    width: 100%;
+    min-height: #{$height};
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.body {
+    width: 100%;
+    background-color: var(--colors-background);
+    min-height: calc(100vh - #{$height});
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 4rem 0px;
+
+
+    &_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 4rem;
+    }
 }

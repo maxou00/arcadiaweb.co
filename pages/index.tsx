@@ -1,14 +1,14 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import { Heading } from "../src/sections/Heading";
-import { OurFunFact } from "../src/sections/OurFunFact";
-import { WhatCanWeDo } from "../src/sections/WhatCanWeDo";
-import { PortfolioToExplore } from "../src/sections/PortfolioToExplore";
-import { OurTeam } from "../src/sections/Team";
-import { Testimonials } from "../src/sections/Testimonials";
-import { VisitOurBlog } from "../src/sections/OurBlog";
+import { WhatCanWeDo } from "../src/sections/home/WhatCanWeDo";
+import { OurTeam } from "../src/sections/home/Team";
+import { Testimonials } from "../src/sections/home/Testimonials";
+import { VisitOurBlog } from "../src/sections/home/OurBlog";
 import { Container } from "../src/components/Container";
-import { CtaSomethingCool } from "../src/sections/ctas/CtaSomethingCool";
+import { CtaSomethingCool } from "../src/sections/home/ctas/CtaSomethingCool";
+import { Heading } from "../src/sections/home/Heading";
+import { OurFunFact } from "../src/sections/home/OurFunFact";
+import { PortfolioToExplore } from "../src/sections/home/PortfolioToExplore";
 
 export default function Home() {
   return (

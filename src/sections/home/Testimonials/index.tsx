@@ -3,20 +3,20 @@ import "@egjs/react-flicking/dist/flicking.css";
 import { FaQuoteLeft } from "react-icons/fa";
 
 import styles from "./index.module.scss";
-import tes1 from "../../../assets/img/nav_img_1.png";
-import tes2 from "../../../assets/img/nav_img_2.png";
-import tes3 from "../../../assets/img/nav_img_3.png";
-import { Text } from "../../components/Text";
+import tes1 from "../../../../assets/img/nav_img_1.png";
+import tes2 from "../../../../assets/img/nav_img_2.png";
+import tes3 from "../../../../assets/img/nav_img_3.png";
+import { Text } from "../../../components/Text";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Sync } from "@egjs/flicking-plugins";
 import {
   BtnCarouselNext,
   BtnCarouselPrev,
-} from "../../components/Buttons/BtnCarouselArrows";
-import { Container } from "../../components/Container";
+} from "../../../components/Buttons/BtnCarouselArrows";
+import { Container } from "../../../components/Container";
 import classNames from "classnames";
 import { BsStarFill } from "react-icons/bs";
-import { GridPoints } from "../../components/GridPoints";
+import { GridPoints } from "../../../components/GridPoints";
 
 const items = [
   {

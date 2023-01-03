@@ -3,12 +3,12 @@ import "@egjs/react-flicking/dist/flicking.css";
 import "@egjs/flicking-plugins/dist/flicking-plugins.css";
 
 import classNames from "classnames";
-import { Text } from "../../components/Text";
+import { Text } from "../../../components/Text";
 import styles from "./index.module.scss";
 
-import portfolio1 from "../../../assets/img/portfolio_1.jpeg";
-import portfolio2 from "../../../assets/img/portfolio_2.jpeg";
-import portfolio3 from "../../../assets/img/portfolio_3.jpeg";
+import portfolio1 from "../../../../assets/img/portfolio_1.jpeg";
+import portfolio2 from "../../../../assets/img/portfolio_2.jpeg";
+import portfolio3 from "../../../../assets/img/portfolio_3.jpeg";
 import { useState } from "react";
 
 const projects = [

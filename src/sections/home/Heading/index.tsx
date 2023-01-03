@@ -1,8 +1,8 @@
-import { BtnRightArrow } from "../../components/Buttons/BtnRightArrow";
-import { Container } from "../../components/Container";
-import { Appbar } from "../../components/Navigation/Appbar";
-import { ScrollToDown } from "../../components/ScrollToDown";
-import { Text } from "../../components/Text";
+import { BtnRightArrow } from "../../../components/Buttons/BtnRightArrow";
+import { Container } from "../../../components/Container";
+import { Appbar } from "../../../components/Navigation/Appbar";
+import { ScrollToDown } from "../../../components/ScrollToDown";
+import { Text } from "../../../components/Text";
 import styles from "./index.module.scss";
 
 export function Heading() {

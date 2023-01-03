@@ -1,5 +1,5 @@
-import { BtnRightArrow } from "../../../components/Buttons/BtnRightArrow";
-import { Text } from "../../../components/Text";
+import { BtnRightArrow } from "../../../../components/Buttons/BtnRightArrow";
+import { Text } from "../../../../components/Text";
 import styles from "./index.module.scss";
 
 export function CtaSomethingCool(){
