@@ -1,3 +1,5 @@
+import classNames from "classnames";
+import { HTMLAttributes } from "react";
 import { Container } from "../../../components/Container";
 import styles from "./index.module.scss";
 
@@ -21,10 +23,10 @@ const blocs = [
 
 ];
 
-export function OurFunFact() {
+export function OurFunFact(props: HTMLAttributes<HTMLDivElement> & { transform?: boolean }) {
   return (
-    <div className={styles.root}>
-      <Container className={styles.content}>
+    <div {...props} data-transform={props.transform || false} className={classNames(styles.root, props.className ?? '')}>
+      <Container className={styles.content} data-transform={props.transform || false}>
         <div className={styles.heading}>
           <h2 className={styles.title}>Our fun fact</h2>
           <p className={styles.description}>

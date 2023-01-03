@@ -25,7 +25,7 @@ export default function Home() {
       <main className={styles.main}>
         <Heading />
         <div className={styles.content}>
-          <OurFunFact />
+          <OurFunFact transform />
           <WhatCanWeDo />
           <PortfolioToExplore />
           <OurTeam />

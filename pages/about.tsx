@@ -17,7 +17,7 @@ export default function About() {
       <div className={styles.body}>
         <Container className={styles.body_container}>
           <YourTrustedPartner />
-          <OurFunFact />
+          <OurFunFact transform={false} />
           <OurTeam />
           <CtaSomethingCool />
         </Container>
