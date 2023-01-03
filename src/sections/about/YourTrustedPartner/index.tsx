@@ -10,10 +10,10 @@ export default function YourTrustedPartner() {
     <div className={styles.root}>
       <div className={classNames(styles.cell1, styles.root_heading)}>
         <Text variant="section-announcer">About our agency</Text>
-        <Text variant="title" className={styles.root_title}>
+        <Text variant="title" className={styles.root_heading_title}>
           Your trusted partner for business
         </Text>
-        <Text variant="body">
+        <Text variant="body" className={styles.root_heading_subtitle}>
           This is the main factor that sets us apart from our competition and
           allows us to deliver a specialist business consultancy service. Our
           team applies its wide-ranging experience to determining. Through our

@@ -23,13 +23,31 @@ $height: 380px;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 4rem 0px;
+    padding: 8rem 0px;
 
     &_container {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        gap: 4rem;
+        gap: 8rem;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    
+    $height: 240px;
+    .heading {
+        width: 100%;
+        min-height: #{$height};
+    }
+
+    .body {
+        padding: 4rem;
+
+        &_container {
+            //padding: var(--mobile-page-padding);
+            gap: 3rem;
+        }
     }
 }

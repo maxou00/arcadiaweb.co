@@ -1,6 +1,7 @@
 import { Container } from "../src/components/Container";
 import { Appbar } from "../src/components/Navigation/Appbar";
 import { Text } from "../src/components/Text";
+import WhyChooseUs from "../src/sections/about/WhyChooseUs";
 import YourTrustedPartner from "../src/sections/about/YourTrustedPartner";
 import { CtaSomethingCool } from "../src/sections/home/ctas/CtaSomethingCool";
 import { OurFunFact } from "../src/sections/home/OurFunFact";
@@ -18,6 +19,7 @@ export default function About() {
         <Container className={styles.body_container}>
           <YourTrustedPartner />
           <OurFunFact transform={false} />
+          <WhyChooseUs />
           <OurTeam />
           <CtaSomethingCool />
         </Container>
