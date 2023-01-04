@@ -32,7 +32,6 @@ $cell_size: 196px;
             max-width: 16ch;
             margin-bottom: 32px;
         }
-
     }
 }
 
@@ -86,9 +85,10 @@ $cell_size: 196px;
     }
 
     &:hover {
-        transition: all .5s cubic-bezier(0.215, 0.61, 0.355, 1);
-        transform: perspective(600px) translate3d(0,0,0);
-        box-shadow: 8px 16px 4px var(--colors-primary);
+        transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+        transform: perspective(600px) translate3d(0, 0, 0);
+        box-shadow: 16px 16px 56px var(--colors-primary-50), 
+            -16px -16px 56px var(--colors-primary-50);
     }
 }
 
@@ -100,7 +100,6 @@ $cell_size: 196px;
         }
     }
 }
-
 
 @media screen and (max-width: 960px) {
     .root {
@@ -120,15 +119,13 @@ $cell_size: 196px;
             align-items: flex-start;
             justify-content: flex-start;
             row-gap: 16px;
-    
+
             &_title {
                 max-width: 16ch;
                 margin-bottom: 32px;
             }
-    
         }
     }
-
 
     .services {
         width: 100%;
@@ -142,5 +139,4 @@ $cell_size: 196px;
         width: 100%;
         height: $cell_size;
     }
-    
 }

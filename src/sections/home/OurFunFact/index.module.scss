@@ -31,7 +31,8 @@
     row-gap: 24px;
 
     .title {
-        font-size: 50px;
+        font-size: 48px;
+        font-weight: 600;
     }
 
     .description {
@@ -54,6 +55,9 @@
     align-items: center;
     justify-content: flex-start;
     gap: 8px;
+
+    --number-font-size: 56px;
+    --number-font-weight: 600;
 
     &_title {
         font-size: 56px;

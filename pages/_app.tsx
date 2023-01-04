@@ -4,6 +4,7 @@ import { ThemeProvider } from "@emotion/react";
 import appTheme from "../src/theming";
 import { Footer } from "../src/sections/Footer";
 import { MouseTracker } from "../src/components/MouseTracker";
+import 'odometer/themes/odometer-theme-default.css';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
