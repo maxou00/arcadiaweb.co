@@ -1,0 +1,27 @@
+.circle {
+    border: 1px solid var(--colors-primary);
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    position: fixed;
+    z-index: 1000;
+    transition: all .5s ease-out;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+    pointer-events: none;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background: var(--colors-primary);
+    position: fixed;
+    border-radius: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    transition: all .8s ease-out;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+    pointer-events: none;
+}
