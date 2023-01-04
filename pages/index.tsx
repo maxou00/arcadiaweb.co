@@ -9,6 +9,7 @@ import { CtaSomethingCool } from "../src/sections/home/ctas/CtaSomethingCool";
 import { Heading } from "../src/sections/home/Heading";
 import { OurFunFact } from "../src/sections/home/OurFunFact";
 import { PortfolioToExplore } from "../src/sections/home/PortfolioToExplore";
+import OurAwards from "../src/sections/home/OurAwards";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
           <OurFunFact transform />
           <WhatCanWeDo />
           <PortfolioToExplore />
+          <OurAwards />
           <OurTeam />
           <Testimonials />
           <VisitOurBlog />
