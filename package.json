@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@egjs/flicking-plugins": "^4.5.0",
-    "@egjs/grid": "^1.11.2",
     "@egjs/react-flicking": "^4.10.5",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",

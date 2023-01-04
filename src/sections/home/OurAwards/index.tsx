@@ -1,4 +1,6 @@
 import Flicking from "@egjs/react-flicking";
+import "@egjs/react-flicking/dist/flicking.css";
+
 import classNames from "classnames";
 import { useCallback, useRef } from "react";
 import {
@@ -9,39 +11,43 @@ import { Container } from "../../../components/Container";
 import { Text } from "../../../components/Text";
 import styles from "./index.module.scss";
 
-const awards = [
-  {
-    year: "2019",
-    award: "Google Awards",
-    description: `
-        Website of the day<br/>
-        Mobile excellence.
-        `,
-  },
-  {
-    year: "2020",
-    award: "New technology innovation",
-    description: `
+const awardGroup = [
+  [
+    {
+      year: "2019",
+      award: "Google Awards",
+      description: `
+          Website of the day<br/>
+          Mobile excellence.
+          `,
+    },
+    {
+      year: "2020",
+      award: "New technology innovation",
+      description: `
+          Honorable mention<br/>
+          Desktop excellence.
+          `,
+    },
+  ],
+  [
+    {
+      year: "2021",
+      award: "CSS award design",
+      description: `
         Honorable mention<br/>
         Desktop excellence.
         `,
-  },
-  {
-    year: "2021",
-    award: "CSS award design",
-    description: `
-        Honorable mention<br/>
-        Desktop excellence.
-        `,
-  },
-  {
-    year: "2022",
-    award: "UI/UX design of the month",
-    description: `
+    },
+    {
+      year: "2022",
+      award: "UI/UX design of the month",
+      description: `
         website of the day<br/>
         Mobile excellence.
         `,
-  },
+    },
+  ],
 ];
 
 export default function OurAwards() {
@@ -76,35 +82,43 @@ export default function OurAwards() {
         </div>
         <div className={styles.awards}>
           <Flicking
-            circular
+            circular={true}
             renderOnlyVisible
+            align="prev"
             ref={(el) => {
               ref.current = el as any;
             }}
           >
-            {awards.map((p, i) => {
+            {awardGroup.map((p, i) => {
               return (
                 <div
-                  key={p.year + i}
-                  className={classNames("flicking-panel", styles.award_wrapper)}
+                  key={i}
+                  className={classNames("flicking-panel", styles.award_slide)}
                 >
-                  <div className={styles.award}>
-                    <div className={styles.overlay}>
-                      <div className={styles.overlay_content}>
-                        <div className={styles.name_content}>
-                          <Text variant="body" className={styles.name}>
-                            {p.year}
+                  {p.map((award, i) => {
+                    return (
+                      <div
+                        key={award.award + i}
+                        className={styles.award_wrapper}
+                      >
+                        <div className={styles.award}>
+                          <Text variant="body" className={styles.award_year}>
+                            {award.year}
                           </Text>
-                          <Text variant="body" className={styles.see_details}>
-                            {p.award}
+                          <Text variant="body" className={styles.award_title}>
+                            {award.award}
                           </Text>
-                          <Text variant="body" className={styles.see_details}>
-                            {p.description}
-                          </Text>
+                          <Text
+                            variant="body"
+                            className={styles.award_description}
+                            dangerouslySetInnerHTML={{
+                              __html: award.description,
+                            }}
+                          ></Text>
                         </div>
                       </div>
-                    </div>
-                  </div>
+                    );
+                  })}
                 </div>
               );
             })}

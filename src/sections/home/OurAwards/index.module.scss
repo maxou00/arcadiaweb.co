@@ -7,29 +7,26 @@
     justify-content: center;
 
     &_content {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: center;
-        row-gap: 64px;
+        display: grid;
+        grid-template-columns: 40% 1fr;
+        gap: 64px;
+        overflow-x: hidden;
     }
 
     .heading {
-        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: center;
+        justify-content: flex-start;
         row-gap: 4px;
 
         .title {
-            max-width: 24ch;
+            max-width: 34ch;
         }
     }
 }
 
 .header_row {
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -37,6 +34,7 @@
 }
 
 .carousel_btns {
+    margin-top: 36px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -48,104 +46,46 @@
     width: 100%;
 }
 
+.award_slide {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 24px;
+}
+
 .award_wrapper {
     transition: all 250ms linear;
-    width: 320px;
-    height: 360px;
+    width: 680px;
     padding-right: 24px;
 }
 
 .award {
     position: relative;
-    width: 100%;
-    height: 100%;
-    border-radius: 24px;
     transition: all 250ms linear;
-
-    .img {
-        width: 100%;
-        height: 100%;
-        border-radius: 24px;
-        object-fit: cover;
-    }
-
-    .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 24px;
-        //background: linear-gradient(90deg, #000000, #00000000);
-
-        &_content {
-            width: 100%;
-            height: 100%;
-            border-radius: 24px;
-
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            padding: 16px;
-
-            position: relative;
-            overflow: hidden;
-        }
-    }
-
-    .name_content {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-end;
-        padding: 16px;
-    }
-
-    .name {
-        font-weight: bold;
-        font-size: 18px;
-        font-family: var(--fonts-heading);
-        font-weight: 500;
-        margin-bottom: 4px;
-    }
-}
-
-
-.indicators {
-    padding: 24px 0px;
-    width: 100%;
-    display: none;
-    flex: row;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
-    column-gap: 16px;
-}
+    background-color: red;
+    padding: 24px;
 
-.indicator {
-    width: 16px;
-    height: 16px;
-    border-radius: 100%;
-    border: 1px solid var(--colors-primary);
-    background-color: var(--colors-primary);
-    padding: 4px;
-
-    .dot {
-        background: transparent;
-        width: 100%;
-        height: 100%;
-        display: block;
-        border-radius: 100%;
+    &_year {
+        font-size: 32px !important;
+        font-weight: 600;
+        color: var(--colors-primary) !important;
+        font-family: var(--fonts-body) !important;
     }
 
-    &[data-selected="true"] {
-        background: transparent;
+    &_title {
+        font-weight: bold;
+        font-size: 20px !important;
+        font-family: var(--fonts-heading) !important;
+        font-weight: 600;
+    }
 
-        .dot {
-            background: var(--colors-primary);
-        }
+    &_description {
+        font-size: 16px !important;
     }
 }
 
@@ -154,7 +94,7 @@
     .root {
         width: 100%;
         padding: 2rem 0px;
-    
+
         &_content {
             display: flex;
             flex-direction: column;
@@ -180,5 +120,4 @@
     .indicators {
         display: flex;
     }
-    
 }
