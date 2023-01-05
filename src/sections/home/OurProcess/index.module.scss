@@ -1,0 +1,110 @@
+@keyframes glow {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+}
+
+.root {
+    width: 100%;
+    padding: 6rem 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &_content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 64px;
+    }
+
+    .heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        row-gap: 4px;
+
+        .title {
+            text-align: center;
+        }
+    }
+}
+
+.video_wrapper {
+    --radius: 24px;
+    position: relative;
+    width: 100%;
+    height: 680px;
+    border-radius: var(--radius);
+
+    .video {
+        width: 100%;
+        height: 100%;
+        border-radius: var(--radius);
+        background: no-repeat center / cover url("../../../../assets/img/hero_bg.jpeg");
+    }
+
+    .overlay {
+        width: 100%;
+        height: 100%;
+        border-radius: var(--radius);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,.2);
+        border-radius: var(--radius);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.play {
+    all: unset;
+    width: 96px;
+    height: 96px;
+    border-radius: 100%;
+    position: relative;
+
+    .glow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+        background-color: #fff;
+        z-index: 1;
+        animation: glow 1.5s ease-out .5s infinite;
+    }
+
+    .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        border-radius: 100%;
+        background: #fff;
+
+        color: tomato;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+}

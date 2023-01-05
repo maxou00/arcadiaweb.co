@@ -10,6 +10,7 @@ import { Heading } from "../src/sections/home/Heading";
 import { OurFunFact } from "../src/sections/home/OurFunFact";
 import { PortfolioToExplore } from "../src/sections/home/PortfolioToExplore";
 import OurAwards from "../src/sections/home/OurAwards";
+import { OurProcess } from "../src/sections/home/OurProcess";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
           <WhatCanWeDo />
           <PortfolioToExplore />
           <OurAwards />
+          <OurProcess />
           <OurTeam />
           <Testimonials />
           <VisitOurBlog />

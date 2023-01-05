@@ -52,7 +52,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 46px;
+    gap: 36px;
 }
 
 .award_wrapper {
@@ -87,37 +87,5 @@
 
     &_description {
         font-size: 16px !important;
-    }
-}
-
-@media screen and (max-width: 960px) {
-    .root {
-        width: 100%;
-        padding: 2rem 0px;
-
-        &_content {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
-            row-gap: 64px;
-        }
-    }
-
-    .header_row {
-        flex-direction: column;
-        align-items: flex-start;
-        row-gap: 24px;
-    }
-
-    .award_wrapper {
-        transition: all 250ms linear;
-        width: 100%;
-        height: 360px;
-        padding: 0px 0px;
-    }
-
-    .indicators {
-        display: flex;
     }
 }
