@@ -37,21 +37,53 @@ export function PortfolioToExplore() {
       </div>
       <div className={styles.projects}>
         <Flicking
-          circular
+          circular={true}
           align="center"
           onChanged={(ev) => {
-            setSelectedIndex(ev.index);
+            let {index} = ev;
+            setSelectedIndex(index);
           }}
         >
           {projects.map((p, i) => {
+            let index = i;
             return (
               <div
                 key={p.name}
                 className={classNames("flicking-panel", styles.project_wrapper)}
-                data-selected={selectedIndex === i}
+                data-selected={selectedIndex === index}
               >
                 <div
-                  data-selected={selectedIndex === i}
+                  data-selected={selectedIndex === index}
+                  className={styles.project}
+                >
+                  <img className={styles.img} src={p.img} alt={p.name} />
+                  <div className={styles.overlay}>
+                    <div className={styles.overlay_content}>
+                      <div className={styles.name_content}>
+                        <Text variant="body" className={styles.name}>
+                          {p.name}
+                        </Text>
+                        <Text variant="body" className={styles.see_details}>
+                          See details {"  "}
+                          <span style={{ letterSpacing: -3 }}>₋₋₋₋</span>
+                        </Text>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+          {projects.map((p, i) => {
+            let index = projects.length + i;
+            return (
+              <div
+                key={p.name}
+                className={classNames("flicking-panel", styles.project_wrapper)}
+                data-selected={selectedIndex === index}
+              >
+                <div
+                  data-selected={selectedIndex === index}
                   className={styles.project}
                 >
                   <img className={styles.img} src={p.img} alt={p.name} />
@@ -75,10 +107,11 @@ export function PortfolioToExplore() {
         </Flicking>
         <div className={styles.indicators}>
           {projects.map((p, index) => {
+            let realSelectedIndex = selectedIndex >= projects.length ? selectedIndex - projects.length : selectedIndex;
             return (
               <span
                 key={p.name}
-                data-selected={selectedIndex === index}
+                data-selected={realSelectedIndex === index}
                 className={styles.indicator}
               >
                 <span className={styles.dot}></span>
