@@ -2,13 +2,14 @@ import Flicking from "@egjs/react-flicking";
 import "@egjs/react-flicking/dist/flicking.css";
 
 import classNames from "classnames";
-import { useCallback, useRef } from "react";
+import { useCallback, useId, useRef } from "react";
 import {
   BtnCarouselNext,
   BtnCarouselPrev,
 } from "../../../components/Buttons/BtnCarouselArrows";
 import { Container } from "../../../components/Container";
 import { Text } from "../../../components/Text";
+import { useNodeRect } from "../../../hooks/useNodeRect";
 import styles from "./index.module.scss";
 
 const awardGroup = [
@@ -65,6 +66,11 @@ export default function OurAwards() {
     }
   }, []);
 
+  const group1 = useId();
+  const group2 = useId();
+  const group3 = useId();
+  const carouselWrapper = useNodeRect();
+
   return (
     <div className={styles.root}>
       <Container className={styles.root_content}>
@@ -80,7 +86,16 @@ export default function OurAwards() {
             </div>
           </div>
         </div>
-        <div className={styles.awards}>
+        <div
+          ref={(el) => (carouselWrapper.ref.current = el as any)}
+          className={styles.awards}
+          style={
+            {
+              "--wrapper-width": (carouselWrapper.width ?? 0) + "px",
+              "--wrapper-height": (carouselWrapper.height ?? 0) + "px",
+            } as any
+          }
+        >
           <Flicking
             circular={true}
             renderOnlyVisible
@@ -92,13 +107,79 @@ export default function OurAwards() {
             {awardGroup.map((p, i) => {
               return (
                 <div
-                  key={i}
+                  key={`${group1}-${i}`}
                   className={classNames("flicking-panel", styles.award_slide)}
                 >
-                  {p.map((award, i) => {
+                  {p.map((award, j) => {
                     return (
                       <div
-                        key={award.award + i}
+                        key={`${group1}-${i}-${award.award}-${j}`}
+                        className={styles.award_wrapper}
+                      >
+                        <div className={styles.award}>
+                          <Text variant="body" className={styles.award_year}>
+                            {award.year}
+                          </Text>
+                          <Text variant="body" className={styles.award_title}>
+                            {award.award}
+                          </Text>
+                          <Text
+                            variant="body"
+                            className={styles.award_description}
+                            dangerouslySetInnerHTML={{
+                              __html: award.description,
+                            }}
+                          ></Text>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              );
+            })}
+            {awardGroup.map((p, i) => {
+              return (
+                <div
+                  key={`${group2}-${i}`}
+                  className={classNames("flicking-panel", styles.award_slide)}
+                >
+                  {p.map((award, j) => {
+                    return (
+                      <div
+                        key={`${group2}-${i}-${award.award}-${j}`}
+                        className={styles.award_wrapper}
+                      >
+                        <div className={styles.award}>
+                          <Text variant="body" className={styles.award_year}>
+                            {award.year}
+                          </Text>
+                          <Text variant="body" className={styles.award_title}>
+                            {award.award}
+                          </Text>
+                          <Text
+                            variant="body"
+                            className={styles.award_description}
+                            dangerouslySetInnerHTML={{
+                              __html: award.description,
+                            }}
+                          ></Text>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              );
+            })}
+            {awardGroup.map((p, i) => {
+              return (
+                <div
+                  key={`${group3}-${i}`}
+                  className={classNames("flicking-panel", styles.award_slide)}
+                >
+                  {p.map((award, j) => {
+                    return (
+                      <div
+                        key={`${group1}-${i}-${award.award}-${j}`}
                         className={styles.award_wrapper}
                       >
                         <div className={styles.award}>

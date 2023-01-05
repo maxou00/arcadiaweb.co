@@ -23,19 +23,17 @@ const blocs = [
   },
 ];
 
-export function OurFunFact(
-  props: HTMLAttributes<HTMLDivElement> & { transform?: boolean }
-) {
+export function OurFunFact({
+  transform,
+  ...props
+}: HTMLAttributes<HTMLDivElement> & { transform?: boolean }) {
   return (
     <div
       {...props}
-      data-transform={props.transform || false}
+      data-transform={transform || false}
       className={classNames(styles.root, props.className ?? "")}
     >
-      <Container
-        className={styles.content}
-        data-transform={props.transform || false}
-      >
+      <Container className={styles.content} data-transform={transform || false}>
         <div className={styles.heading}>
           <h2 className={styles.title}>Our fun fact</h2>
           <p className={styles.description}>
@@ -51,9 +49,9 @@ export function OurFunFact(
                 <Odometer
                   value={bloc.number}
                   style={{
-                    fontSize: 'var(--number-font-size)',
-                    fontWeight: 'var(--number-font-weight)',
-                    fontFamily: "var(--fonts-body)"
+                    fontSize: "var(--number-font-size)",
+                    fontWeight: "var(--number-font-weight)",
+                    fontFamily: "var(--fonts-body)",
                   }}
                 />
                 <div className={styles.bloc_content}>

@@ -1,6 +1,6 @@
 .root {
     width: 100%;
-    padding: 4rem 0px;
+    padding: 3rem 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,52 +43,52 @@
 }
 
 .awards {
-    width: 100%;
+    overflow: hidden;
 }
 
 .award_slide {
+    width: calc(var(--wrapper-width) / 2);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 24px;
+    gap: 46px;
 }
 
 .award_wrapper {
     transition: all 250ms linear;
-    width: 680px;
-    padding-right: 24px;
+    width: 100%;
+    pointer-events: none;
 }
 
 .award {
-    position: relative;
-    transition: all 250ms linear;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    background-color: red;
-    padding: 24px;
+    gap: 8px;
+    //padding: 8px;
 
     &_year {
         font-size: 32px !important;
         font-weight: 600;
         color: var(--colors-primary) !important;
-        font-family: var(--fonts-body) !important;
+        font-family: var(--fonts-heading) !important;
     }
 
     &_title {
         font-weight: bold;
-        font-size: 20px !important;
+        font-size: 21px !important;
         font-family: var(--fonts-heading) !important;
         font-weight: 600;
+        opacity: 1 !important;
     }
 
     &_description {
         font-size: 16px !important;
     }
 }
-
 
 @media screen and (max-width: 960px) {
     .root {
