@@ -12,6 +12,7 @@ import { PortfolioToExplore } from "../src/sections/home/PortfolioToExplore";
 import OurAwards from "../src/sections/home/OurAwards";
 import { OurProcess } from "../src/sections/home/OurProcess";
 import { MarqueeSlide } from "../src/sections/home/MarqueeEffect";
+import { Partners } from "../src/sections/Partners";
 
 export default function Home() {
   return (
@@ -37,6 +38,7 @@ export default function Home() {
           <Testimonials />
           <VisitOurBlog />
           <MarqueeSlide />
+          <Partners />
           <div className={styles.cta_wrapper}>
             <Container>
               <CtaSomethingCool />
