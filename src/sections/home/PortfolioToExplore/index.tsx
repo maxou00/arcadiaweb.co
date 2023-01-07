@@ -10,6 +10,7 @@ import portfolio1 from "../../../../assets/img/portfolio_1.jpeg";
 import portfolio2 from "../../../../assets/img/portfolio_2.jpeg";
 import portfolio3 from "../../../../assets/img/portfolio_3.jpeg";
 import { useState } from "react";
+import CarouselUtils from "../../../utils/carousel";
 
 const projects = [
   {
@@ -107,7 +108,7 @@ export function PortfolioToExplore() {
         </Flicking>
         <div className={styles.indicators}>
           {projects.map((p, index) => {
-            let realSelectedIndex = selectedIndex >= projects.length ? selectedIndex - projects.length : selectedIndex;
+            let realSelectedIndex = CarouselUtils.extractRealIndex(projects.length, selectedIndex, 2);
             return (
               <span
                 key={p.name}

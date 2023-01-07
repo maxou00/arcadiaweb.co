@@ -49,3 +49,12 @@
     color: transparent;
     -webkit-text-stroke: 2px var(--colors-primary);
 }
+
+
+@media screen and (max-width: 960px) {
+    
+    .text {
+        font-size: 3.5rem;
+    }
+
+}

@@ -1,6 +1,10 @@
 .content {
     width: 100%;
     background: var(--colors-background);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 .cta_wrapper {
@@ -13,8 +17,8 @@
 }
 
 @media screen and (max-width: 960px) {
-    
     .cta_wrapper {
-        padding: 2rem 0px 4rem 0px;
+        padding: 0;
+        padding-bottom: 4rem;
     }
 }

@@ -62,7 +62,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0,0,0,.2);
+        background: rgba(0, 0, 0, 0.2);
         border-radius: var(--radius);
         display: flex;
         flex-direction: column;
@@ -87,7 +87,7 @@
         border-radius: 100%;
         background-color: #fff;
         z-index: 1;
-        animation: glow 1.5s ease-out .5s infinite;
+        animation: glow 1.5s ease-out 0.5s infinite;
     }
 
     .content {
@@ -105,6 +105,37 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .root {
+        padding: 2rem 0px;
+
+        &_content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 32px;
+        }
+    }
+
+    .video_wrapper {
+        --radius: 24px;
+        position: relative;
+        width: 100%;
+        height: 380px;
+        border-radius: var(--radius);
+
+    }
+
+    .play {
+        all: unset;
+        width: 72px;
+        height: 72px;
+        border-radius: 100%;
+        position: relative;
     }
 
 }

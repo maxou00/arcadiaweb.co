@@ -154,10 +154,17 @@
 }
 
 @media screen and (max-width: 960px) {
+
+    .root {
+        row-gap: 24px;
+        .heading {
+        }
+    }
+
     .project_wrapper {
         padding: 0px 16px;
         width: 100%;
-
+        
         &[data-selected="false"] {
             transform: scale(0.9);
         }
@@ -166,5 +173,9 @@
     .project {
         height: 360px;
         --name-size: 240px;
+    }
+
+    .indicators {
+        padding: 0px;
     }
 }

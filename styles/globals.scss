@@ -25,6 +25,7 @@ $container: 1280px;
   --heading-bottom-card-transform: 128px;
 
   --mobile-page-padding: 12px;
+  --section-spacing: 4rem;
 }
 
 * {
@@ -85,7 +86,6 @@ a {
   margin-top: 4px;
   margin-bottom: 4px;
 }
-
 
 @media screen and (max-width: #{$container}) {
   :root {

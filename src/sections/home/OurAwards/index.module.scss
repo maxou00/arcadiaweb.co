@@ -111,3 +111,75 @@
     transform: translateY(-50%);
     animation: triangle 3s ease-out .5s infinite alternate;
 }
+
+.indicators {
+    padding: 4rem 0px;
+    width: 100%;
+    flex: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 16px;
+    display: none;
+}
+
+.indicator {
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    border: 1px solid var(--colors-primary);
+    background-color: var(--colors-primary);
+    padding: 4px;
+
+    .dot {
+        background: transparent;
+        width: 100%;
+        height: 100%;
+        display: block;
+        border-radius: 100%;
+    }
+
+    &[data-selected="true"] {
+        background: transparent;
+
+        .dot {
+            background: var(--colors-primary);
+        }
+    }
+}
+
+
+@media screen and (max-width: 960px) {
+
+    .root {
+        padding: 2rem 0px;
+        
+        &_content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 8px;
+        }
+
+    }
+
+    .indicators {
+        display: flex;
+    }
+
+    .awards {
+        all: unset;
+        width: 100%;
+        //overflow: auto;
+        min-height: 120px;
+    }
+
+    .award_slide {
+        width: var(--wrapper-width);
+        gap: 24px;
+    }
+
+    .lost_triangle {
+        display: none;
+    }
+}

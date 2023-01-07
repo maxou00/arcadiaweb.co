@@ -2,7 +2,7 @@ import Flicking from "@egjs/react-flicking";
 import "@egjs/react-flicking/dist/flicking.css";
 
 import classNames from "classnames";
-import { useCallback, useId, useRef } from "react";
+import { useCallback, useId, useRef, useState } from "react";
 import {
   BtnCarouselNext,
   BtnCarouselPrev,
@@ -10,6 +10,7 @@ import {
 import { Container } from "../../../components/Container";
 import { Text } from "../../../components/Text";
 import { useNodeRect } from "../../../hooks/useNodeRect";
+import CarouselUtils from "../../../utils/carousel";
 import styles from "./index.module.scss";
 
 const awardGroup = [
@@ -53,6 +54,7 @@ const awardGroup = [
 
 export default function OurAwards() {
   const ref = useRef<Flicking | undefined>();
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
   const onPrev = useCallback(() => {
     if (ref.current) {
@@ -71,6 +73,8 @@ export default function OurAwards() {
   const group3 = useId();
   const carouselWrapper = useNodeRect();
   const rootNode = useNodeRect();
+
+  const replicas = 3;
 
   return (
     <div
@@ -115,6 +119,10 @@ export default function OurAwards() {
                 align="prev"
                 ref={(el) => {
                   ref.current = el as any;
+                }}
+                onChanged={(ev) => {
+                  let { index } = ev;
+                  setSelectedIndex(index);
                 }}
               >
                 {awardGroup.map((p, i) => {
@@ -245,6 +253,24 @@ export default function OurAwards() {
                 })}
               </Flicking>
             )}
+        </div>
+        <div className={styles.indicators}>
+          {awardGroup.map((p, index) => {
+            let realSelectedIndex = CarouselUtils.extractRealIndex(
+              awardGroup.length,
+              selectedIndex,
+              replicas
+            );
+            return (
+              <span
+                key={index}
+                data-selected={realSelectedIndex === index}
+                className={styles.indicator}
+              >
+                <span className={styles.dot}></span>
+              </span>
+            );
+          })}
         </div>
       </Container>
     </div>

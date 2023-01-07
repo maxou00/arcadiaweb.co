@@ -37,7 +37,6 @@ export default function Home() {
           <OurTeam />
           <Testimonials />
           <VisitOurBlog />
-          <MarqueeSlide />
           <Partners />
           <div className={styles.cta_wrapper}>
             <Container>
