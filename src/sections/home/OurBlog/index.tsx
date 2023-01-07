@@ -51,6 +51,7 @@ export function VisitOurBlog() {
           <Flicking
             circular
             renderOnlyVisible
+            align="prev"
             onChanged={(ev) => {
               setSelectedIndex(ev.index);
             }}

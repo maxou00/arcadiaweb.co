@@ -70,15 +70,26 @@ export default function OurAwards() {
   const group2 = useId();
   const group3 = useId();
   const carouselWrapper = useNodeRect();
+  const rootNode = useNodeRect();
 
   return (
-    <div className={styles.root}>
+    <div
+      ref={(el) => (rootNode.ref.current = el as any)}
+      className={styles.root}
+    >
+      <div
+        className={styles.lost_triangle}
+        style={{
+          height: ((rootNode.client?.height ?? 0) * 2) / 1.9 + "px",
+          width: ((rootNode.client?.height ?? 0) * 1) / 2 + "px",
+        }}
+      ></div>
       <Container className={styles.root_content}>
         <div className={styles.heading}>
           <Text variant="section-announcer">Our Awards</Text>
           <div className={styles.header_row}>
             <Text variant="title" className={styles.title}>
-              We get multiple awards
+              We've got multiple awards
             </Text>
             <div className={styles.carousel_btns}>
               <BtnCarouselPrev onClick={onPrev} />
@@ -91,13 +102,13 @@ export default function OurAwards() {
           className={styles.awards}
           style={
             {
-              "--wrapper-width": (carouselWrapper.width ?? 0) + "px",
-              "--wrapper-height": (carouselWrapper.height ?? 0) + "px",
+              "--wrapper-width": (carouselWrapper.client?.width ?? 0) + "px",
+              "--wrapper-height": (carouselWrapper.client?.height ?? 0) + "px",
             } as any
           }
         >
-          {(carouselWrapper.width ?? 0) > 0 &&
-            (carouselWrapper.height ?? 0) > 0 && (
+          {(carouselWrapper.client?.width ?? 0) > 0 &&
+            (carouselWrapper.client?.height ?? 0) > 0 && (
               <Flicking
                 circular={true}
                 renderOnlyVisible

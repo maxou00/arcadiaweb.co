@@ -84,6 +84,7 @@ export function OurTeam() {
           <Flicking
             circular
             renderOnlyVisible
+            align="prev"
             onChanged={(ev) => {
               setSelectedIndex(ev.index);
             }}
