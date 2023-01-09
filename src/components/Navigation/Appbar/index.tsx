@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Envelope, List, MapPin, Phone, X } from "phosphor-react";
 import { useState } from "react";
 import { FaLinkedin, FaSlack, FaTwitter, FaYoutube } from "react-icons/fa";
+import { useInView } from "react-intersection-observer";
 import { Container } from "../../Container";
 import { InputNewsletter } from "../../Inputs/InputNewsletter";
 import NavigationDrawer from "../drawer";
@@ -64,77 +65,80 @@ export function Appbar() {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   return (
-    <div className={styles.appbar}>
-      <Container className={styles.content} innerRef={setParentRef}>
-        <h1 className={styles.heading}>ArcadiaWeb</h1>
-        <DesktopMenu parent={parentRef ?? undefined} />
-        <div className={styles.side_actions}>
-          <button
-            onClick={() => setDrawerOpen(true)}
-            className={styles.hamburger}
-          >
-            <List size={32} />
-          </button>
-        </div>
-      </Container>
-      <NavigationDrawer
-        isOpen={drawerOpen}
-        onClose={() => setDrawerOpen(false)}
-      >
-        <div className={styles.menu_drawer}>
-          <button
-            className={styles.close_btn}
-            onClick={() => setDrawerOpen(false)}
-          >
-            <X size={24} />
-          </button>
+    <div className={styles.appbar__wrapper}>
+      <div className={styles.appbar__tracker}></div>
+      <div className={styles.appbar}>
+        <Container className={styles.content} innerRef={setParentRef}>
+          <h1 className={styles.heading}>ArcadiaWeb</h1>
+          <DesktopMenu parent={parentRef ?? undefined} />
+          <div className={styles.side_actions}>
+            <button
+              onClick={() => setDrawerOpen(true)}
+              className={styles.hamburger}
+            >
+              <List size={32} />
+            </button>
+          </div>
+        </Container>
+        <NavigationDrawer
+          isOpen={drawerOpen}
+          onClose={() => setDrawerOpen(false)}
+        >
+          <div className={styles.menu_drawer}>
+            <button
+              className={styles.close_btn}
+              onClick={() => setDrawerOpen(false)}
+            >
+              <X size={24} />
+            </button>
 
-          <div className={styles.heading}>
-            <h2 className={styles.heading_title}>Arcadiaweb</h2>
-            <p className={styles.heading_description}>
-              Do you have a project in your mind? Keep connect us.
-            </p>
-          </div>
+            <div className={styles.heading}>
+              <h2 className={styles.heading_title}>Arcadiaweb</h2>
+              <p className={styles.heading_description}>
+                Do you have a project in your mind? Keep connect us.
+              </p>
+            </div>
 
-          <div className={styles.contacts}>
-            <h2 className={styles.section_title}>Contact Us</h2>
-            <div className={styles.contact}>
-              <Phone size={24} color="var(--colors-primary)" />
-              <p>+44 454 7800 112</p>
+            <div className={styles.contacts}>
+              <h2 className={styles.section_title}>Contact Us</h2>
+              <div className={styles.contact}>
+                <Phone size={24} color="var(--colors-primary)" />
+                <p>+44 454 7800 112</p>
+              </div>
+              <div className={styles.contact}>
+                <Envelope size={24} color="var(--colors-primary)" />
+                <p>infotech@arino.com</p>
+              </div>
+              <div className={styles.contact}>
+                <MapPin size={24} color="var(--colors-primary)" />
+                <p>50 Wall Street Suite, 44150 Ohio, United States</p>
+              </div>
             </div>
-            <div className={styles.contact}>
-              <Envelope size={24} color="var(--colors-primary)" />
-              <p>infotech@arino.com</p>
+            <div className={styles.subscribe}>
+              <h3>Subscribe</h3>
+              <InputNewsletter />
+              <p className={styles.subscription_text}>
+                At vero eos et accusamus et iusto odio as part dignissimos
+                ducimus qui blandit.
+              </p>
             </div>
-            <div className={styles.contact}>
-              <MapPin size={24} color="var(--colors-primary)" />
-              <p>50 Wall Street Suite, 44150 Ohio, United States</p>
+            <div className={styles.social_row}>
+              <button className={styles.social}>
+                <FaLinkedin size={18} />
+              </button>
+              <button className={styles.social}>
+                <FaTwitter size={18} />
+              </button>
+              <button className={styles.social}>
+                <FaYoutube size={18} />
+              </button>
+              <button className={styles.social}>
+                <FaSlack size={18} />
+              </button>
             </div>
           </div>
-          <div className={styles.subscribe}>
-            <h3>Subscribe</h3>
-            <InputNewsletter />
-            <p className={styles.subscription_text}>
-              At vero eos et accusamus et iusto odio as part dignissimos ducimus
-              qui blandit.
-            </p>
-          </div>
-          <div className={styles.social_row}>
-            <button className={styles.social}>
-              <FaLinkedin size={18} />
-            </button>
-            <button className={styles.social}>
-              <FaTwitter size={18} />
-            </button>
-            <button className={styles.social}>
-              <FaYoutube size={18} />
-            </button>
-            <button className={styles.social}>
-              <FaSlack size={18} />
-            </button>
-          </div>
-        </div>
-      </NavigationDrawer>
+        </NavigationDrawer>
+      </div>
     </div>
   );
 }
