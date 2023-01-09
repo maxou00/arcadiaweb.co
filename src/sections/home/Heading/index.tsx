@@ -7,7 +7,7 @@ import styles from "./index.module.scss";
 
 export function Heading() {
   return (
-    <div className={styles.root}>
+    <div id="heading" className={styles.root}>
       <Appbar />
       <div className={styles.content_section}>
         <Container className={styles.main}>

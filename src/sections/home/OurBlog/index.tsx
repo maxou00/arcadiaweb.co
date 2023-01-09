@@ -10,7 +10,9 @@ import serviceReactImg from "../../../../assets/img/service_2.jpeg";
 import serviceMarketingImg from "../../../../assets/img/service_3.jpeg";
 import serviceTechImg from "../../../../assets/img/service_4.jpeg";
 import classNames from "classnames";
-import { useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
+import { useId } from "../../../hooks/useId";
+import gsap from "gsap";
 
 const articles = [
   {
@@ -35,10 +37,57 @@ const articles = [
   },
 ];
 
-export function VisitOurBlog() {
+export default function VisitOurBlog() {
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const id = useId();
+  const rootRef = useRef();
+  const circle1Ref = useRef<HTMLDivElement | null>();
+  const circle2Ref = useRef<HTMLDivElement | null>();
+
+  useLayoutEffect(() => {
+    if (circle1Ref.current && rootRef.current) {
+      let circle1Rect = circle1Ref.current.getBoundingClientRect();
+      gsap.to(circle1Ref.current, {
+        y: -circle1Rect.height * 1.2,
+        scrollTrigger: {
+          scrub: 1,
+          trigger: rootRef.current,
+          start: "top top",
+          end: "bottom top",
+        },
+      });
+    }
+
+    if (circle2Ref.current && rootRef.current) {
+      let circle2Rect = circle2Ref.current.getBoundingClientRect();
+      gsap.to(circle2Ref.current, {
+        x: circle2Rect.width * .5,
+        scrollTrigger: {
+          scrub: 1,
+          trigger: rootRef.current,
+          start: "top top",
+          end: "bottom top",
+        },
+      });
+    }
+  }, []);
+
   return (
-    <div className={styles.root}>
+    <div
+      id={id}
+      ref={(el) => (rootRef.current = el as any)}
+      className={styles.root}
+    >
+      <div
+        ref={(el) => (circle1Ref.current = el as any)}
+        className={styles.circle__1}
+      ></div>
+
+      <div
+        ref={(el) => (circle2Ref.current = el as any)}
+        className={styles.circle__2}
+      ></div>
+
       <Container className={styles.root_container}>
         <div className={styles.root_heading}>
           <Text variant="section-announcer">Our Blog</Text>

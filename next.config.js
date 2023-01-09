@@ -3,4 +3,6 @@ const nextConfig = {
   reactStrictMode: true,
 }
 
-module.exports = nextConfig
+const withTranspiler = require("next-transpile-modules")(['gsap']);
+
+module.exports = withTranspiler(nextConfig);
