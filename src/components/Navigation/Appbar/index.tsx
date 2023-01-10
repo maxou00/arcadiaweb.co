@@ -3,6 +3,10 @@ import { Envelope, List, MapPin, Phone, X } from "phosphor-react";
 import { useState } from "react";
 import { FaLinkedin, FaSlack, FaTwitter, FaYoutube } from "react-icons/fa";
 import { useInView } from "react-intersection-observer";
+import Logo from "../../../embedded/Logo";
+import LogoFull from "../../../embedded/LogoFull";
+import { useNavbarScrollAnimation } from "../../../hooks/useNavbarScrollAnimation";
+import { useNodeRect } from "../../../hooks/useNodeRect";
 import { Container } from "../../Container";
 import { InputNewsletter } from "../../Inputs/InputNewsletter";
 import NavigationDrawer from "../drawer";
@@ -64,12 +68,28 @@ export function Appbar() {
   const [parentRef, setParentRef] = useState<HTMLDivElement | null>();
   const [drawerOpen, setDrawerOpen] = useState(false);
 
+  const { trackingRef, inView, shouldFix, lastScrollPercent } =
+    useNavbarScrollAnimation();
+
+  const appbar = useNodeRect();
+
   return (
     <div className={styles.appbar__wrapper}>
-      <div className={styles.appbar__tracker}></div>
-      <div className={styles.appbar}>
+      <div
+        ref={trackingRef}
+        className={styles.appbar__tracker}
+        style={{
+          width: appbar.client?.width ?? 0,
+          height: appbar.client?.height ?? 0,
+        }}
+      ></div>
+      <div
+        ref={(el) => (appbar.ref.current = el as any)}
+        data-fixed={shouldFix}
+        className={styles.appbar}
+      >
         <Container className={styles.content} innerRef={setParentRef}>
-          <h1 className={styles.heading}>ArcadiaWeb</h1>
+          <LogoFull className={styles.logo} />
           <DesktopMenu parent={parentRef ?? undefined} />
           <div className={styles.side_actions}>
             <button

@@ -1,11 +1,12 @@
 .item {
-    padding: 24px;
-    text-transform: uppercase;
+    min-width: 120px;
+    flex-grow: 1;
+    height: 68px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 2px;
+    gap: 8px;
     position: relative;
 
     &:hover {

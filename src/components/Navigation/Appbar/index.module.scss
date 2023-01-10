@@ -1,3 +1,16 @@
+.appbar__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.appbar__tracker {
+    width: 1px;
+    height: 1px;
+}
+
 .appbar {
     width: 100%;
     min-height: var(--size-min-appbar-height);
@@ -5,6 +18,9 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
 
     .content {
         padding: 0px var(--size-container-padding);
@@ -13,6 +29,10 @@
         align-items: center;
         justify-content: space-between;
         position: relative;
+    }
+
+    .logo {
+        height: 36px;
     }
 
     .menu {
@@ -27,6 +47,15 @@
         all: unset;
         color: var (--colors-on-background);
         display: none;
+    }
+
+    &[data-fixed="true"] {
+        background: var(--colors-surface);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 4;
     }
 }
 
