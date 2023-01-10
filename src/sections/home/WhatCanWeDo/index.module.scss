@@ -72,14 +72,23 @@ $cell_size: 196px;
 
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
+        padding: 24px;
+        gap: 8px;
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--colors-primary);
+        }
 
         .text {
             font-weight: 600;
-            font-size: 20px;
+            font-size: 22px;
             font-family: var(--fonts-heading);
-            text-align: center;
+            text-align: left;
             opacity: 1;
         }
     }

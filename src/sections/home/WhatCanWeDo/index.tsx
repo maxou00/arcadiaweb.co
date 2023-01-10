@@ -56,6 +56,7 @@ export function WhatCanWeDo() {
                   className={styles.img}
                 />
                 <div className={styles.textlayer}>
+                  <span className={styles.dot}></span>
                   <Text variant="body" className={styles.text}>
                     {service.name}
                   </Text>
