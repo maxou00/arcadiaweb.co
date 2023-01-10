@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import { BtnRightArrow } from "../../../components/Buttons/BtnRightArrow";
 import { Container } from "../../../components/Container";
 import { Appbar } from "../../../components/Navigation/Appbar";
@@ -19,7 +20,7 @@ export function Heading() {
               <BtnRightArrow text="Get a quote" />
             </div>
             <div className={styles.right}>
-              <Text variant="subtitle">
+              <Text variant="subtitle" className={styles.quote}>
                 We deliver best problem solving solution for our client and
                 provide finest finishing product in present and upcoming future.
               </Text>
@@ -29,6 +30,13 @@ export function Heading() {
             <ScrollToDown />
           </div>
         </Container>
+      </div>
+      <div className={styles.socials}>
+        <span className={classNames(styles.text, styles.follow_us)}>Follow Us</span>
+        <span className={styles.divider__h}></span>
+        <span className={classNames(styles.text, styles.social)}>LinkedIn</span>
+        <span className={styles.divider__v}></span>
+        <span className={classNames(styles.text, styles.social)}>Twitter</span>
       </div>
     </div>
   );

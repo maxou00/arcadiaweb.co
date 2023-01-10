@@ -1,5 +1,4 @@
 .item {
-    min-width: 120px;
     flex-grow: 1;
     height: 68px;
     display: flex;
@@ -8,6 +7,8 @@
     justify-content: center;
     gap: 8px;
     position: relative;
+    text-transform: uppercase;
+    padding: 0px 16px;
 
     &:hover {
         cursor: pointer;

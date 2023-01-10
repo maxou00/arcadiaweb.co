@@ -73,8 +73,8 @@ $cell_size: 196px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: center;
-        padding: 24px;
+        justify-content: flex-start;
+        padding: 48px 16px 24px 24px;
         gap: 8px;
 
         .dot {

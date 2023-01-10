@@ -23,7 +23,8 @@
         .hero_title {
             font-size: 120px;
             margin-top: 86px;
-            margin-bottom: 60px;
+            margin-bottom: 64px;
+            line-height: 135%;
         }
     }
 }
@@ -43,6 +44,12 @@
     }
 
     .right {
+
+        .quote {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 2rem;
+        }
     }
 }
 
@@ -54,6 +61,44 @@
     justify-content: center;
     padding: 12px;
 }
+
+.socials {
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform-origin: 50% 50%;
+    transform: translate(30%, -100%) rotate(-90deg);
+
+    .text {
+        font-size: 16px;
+    }
+
+    .social {
+        
+    }
+    
+    .divider__v {
+        display: inline-block;
+        height: 16px;
+        width: 1px;
+        background: var(--colors-on-background);
+    }
+    
+    .divider__h {
+        display: inline-block;
+        height: 1px;
+        width: 16px;
+        background: var(--colors-on-background);
+    }
+
+}
+
 
 @media screen and (max-width: 1280px) {
     .root {
@@ -86,5 +131,13 @@
         bottom: 0;
         left: 50%;
         transform: translate(-50%, calc(-1 * var(--heading-bottom-card-transform)));
+    }
+}
+
+
+@media screen and (max-width: 960px) {
+
+    .socials {
+        display: none;
     }
 }
