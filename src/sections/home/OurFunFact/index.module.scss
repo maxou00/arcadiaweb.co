@@ -14,7 +14,7 @@
         background: no-repeat center / cover url("../../../../assets/img/cta_bg.jpeg");
         color: var(--colors-on-surface);
         padding: 56px;
-        transform: translateY(calc(-1 * var(--heading-bottom-card-transform)));
+        transform: translateY(calc(-1 * var(--stats-distance)));
         border-radius: 24px;
 
         &[data-transform="false"] {
@@ -86,6 +86,41 @@
     }
 }
 
+@media screen and (max-width: 960px) {
+    .root {
+        .content {
+            width: 85vw;
+            padding: 48px !important;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            transform: translateY(calc(-1 * var(--stats-distance)));
+        }
+
+        .bloc {
+            --number-font-size: 56px;
+            --number-font-weight: 600;
+
+            &_content {
+                .plus {
+                    font-size: 24px;
+                }
+
+                .p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .heading {
+        .title {
+            font-size: 2.3rem;
+        }
+    }
+}
+
 @media screen and (max-width: 860px) {
     .root {
         .content {
@@ -93,7 +128,7 @@
             flex-direction: column;
             align-items: flex-start;
             justify-content: flex-start;
-            transform: translateY(calc(-1 * var(--heading-bottom-card-transform)));
+            transform: translateY(calc(-1 * var(--stats-distance)));
         }
     }
     .heading {
@@ -103,7 +138,7 @@
     }
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 640px) {
     .achievements {
         display: flex;
         flex-direction: column;

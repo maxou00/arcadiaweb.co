@@ -14,7 +14,7 @@ const partners = [
   { img: partner_2.src },
 ];
 
-export function Partners() {
+export default function Partners() {
   return (
     <div className={styles.root}>
       <MarqueeSlide />

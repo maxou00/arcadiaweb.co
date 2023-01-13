@@ -10,8 +10,9 @@ import { OurFunFact } from "../src/sections/home/OurFunFact";
 import { PortfolioToExplore } from "../src/sections/home/PortfolioToExplore";
 import OurAwards from "../src/sections/home/OurAwards";
 import { OurProcess } from "../src/sections/home/OurProcess";
-import { Partners } from "../src/sections/Partners";
 import VisitOurBlog from "../src/sections/home/OurBlog";
+import dynamic from "next/dynamic";
+import Partners from "../src/sections/Partners";
 
 export default function Home() {
   return (

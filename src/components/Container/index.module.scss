@@ -1,3 +1,5 @@
 .base {
     width: var(--size-container-max-width);
+    padding-left: var(--mobile-page-padding) !important;
+    padding-right: var(--mobile-page-padding) !important;
 }

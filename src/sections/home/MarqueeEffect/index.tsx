@@ -34,9 +34,6 @@ export function MarqueeSlide() {
         .timeline({ repeat: -1, paused: false })
         .fromTo(content, { x: 0 }, { x: -contentWidth, duration, ease: "none" }, "<")
         .fromTo(clone, { x: contentWidth }, { x: 0, duration, ease: "none" }, "<")
-        //.set(content, { x: contentWidth })
-        //.to(clone, { x: -contentWidth }, "<")
-        //.to(content, { x: 0, duration })
         .progress(1)
         .progress(0);
 

@@ -36,45 +36,85 @@
     }
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1200px) {
 
     .text {
     
         &[data-variant="hero"] {
-            font-size: 6rem;
-            font-family: var(--fonts-heading);
-            color: var(--colors-on-surface);
+            font-size: 80px;
         }
     
         &[data-variant="title"] {
-            font-size: 2.2rem;
-            font-weight: 600;
-            font-family: var(--fonts-heading);
-            color: var(--colors-on-surface);
+            font-size: 2rem;
         }
     
         &[data-variant="section-announcer"] {
-            font-size: .95rem;
-            font-family: var(--fonts-heading);
-            font-weight: 600;
-            color: var(--colors-on-surface);
-            opacity: .55;
+            font-size: .85rem;
         }
     
         &[data-variant="subtitle"] {
             font-size: 16px;
-            font-family: var(--fonts-body);
-            font-weight: 600;
-            color: var(--colors-on-surface);
         }
     
         &[data-variant="body"] {
             font-size: 14px;
-            font-family: var(--fonts-body);
-            color: var(--colors-on-surface);
-            opacity: .75;
         }
     }
+
+}
+
+
+@media screen and (max-width: 860px) {
+
+    .text {
     
+        &[data-variant="hero"] {
+            font-size: 56px;
+        }
+    
+        &[data-variant="title"] {
+            font-size: 2rem;
+        }
+    
+        &[data-variant="section-announcer"] {
+            font-size: .85rem;
+        }
+    
+        &[data-variant="subtitle"] {
+            font-size: 16px;
+        }
+    
+        &[data-variant="body"] {
+            font-size: 14px;
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 580px) {
+
+    .text {
+    
+        &[data-variant="hero"] {
+            font-size: 42px;
+        }
+    
+        &[data-variant="title"] {
+            font-size: 2rem;
+        }
+    
+        &[data-variant="section-announcer"] {
+            font-size: .85rem;
+        }
+    
+        &[data-variant="subtitle"] {
+            font-size: 16px;
+        }
+    
+        &[data-variant="body"] {
+            font-size: 14px;
+        }
+    }
 
 }

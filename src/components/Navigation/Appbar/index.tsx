@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Envelope, List, MapPin, Phone, X } from "phosphor-react";
-import { useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { FaLinkedin, FaSlack, FaTwitter, FaYoutube } from "react-icons/fa";
 import { useInView } from "react-intersection-observer";
 import Logo from "../../../embedded/Logo";
@@ -72,6 +72,14 @@ export function Appbar() {
     useNavbarScrollAnimation();
 
   const appbar = useNodeRect();
+
+  useEffect(() => {
+    if (appbar.client) {
+      let root = document.querySelector(":root") as HTMLHtmlElement;
+      root.style.setProperty("--appbar-height", appbar.client.height+"px");
+      root.style.setProperty("--appbar-width", appbar.client.width+"px");
+    }
+  }, [appbar.client]);
 
   return (
     <div className={styles.appbar__wrapper}>
